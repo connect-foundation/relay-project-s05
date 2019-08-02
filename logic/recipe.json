@@ -1,90 +1,63 @@
 [
-  {
-    "id": 1,
-    "menu": "치킨수프",
-    "ingredients": [
-      "닭",
-      "당근",
-      "소금",
-      "후추",
-      "양배추",
-      "샐러리",
-      "양파",
-      "감자",
-      "마늘"
-    ],
-    "matchsize": 0,
-    "theme":"american",
-    "url": "https://images.unsplash.com/photo-1544068192-4c4af19868c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-  },
-
-  {
-    "id": 2,
-    "menu": "삼겹살구이",
-    "ingredients": ["삼겹살", "소금"],
-    "matchsize": 0,
-    "theme":"korean",
-    "url": "https://images.unsplash.com/photo-1550388341-d3d5ac2a724e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=919&q=80"
-  },
-
-  {
-    "id": 3,
-    "menu": "까르보나라",
-    "ingredients": ["스파게티면", "치즈", "달걀", "버터"],
-    "matchsize": 0,
-    "theme":"european",
-    "url": "https://images.unsplash.com/photo-1528658948776-cf610b846f80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
-  },
-  {
-    "id": 4,
-    "menu": "스테이크",
-    "ingredients": ["등심", "식용유", "버터", "후추", "소스"],
-    "matchsize": 0,
-    "theme":"european",
-    "url": "https://images.unsplash.com/photo-1558199141-391d935676f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80"
-  },
-  {
-    "id": 5,
-    "menu": "연어샐러드",
-    "ingredients": ["연어", "샐러리", "마요네즈", "머스타드", "양파", "후추"],
-    "matchsi  ze": 0,
-    "theme":"european",
-    "url": "https://post-phinf.pstatic.net/MjAxODA3MDZfMjIx/MDAxNTMwODEzMDQ5MDUx.HwpDXEUFN20hCHNUQSzSw5yuPmprI23w_RtNxm_rHMog.bGC8g4obptlW5a_ku_d622SrMo4LK1JhHwoZQByf9G4g.JPEG/2Z5A2968.jpg?type=w1200"
-  },
-  {
-    "id": 6,
-    "menu": "피자",
-    "ingredients": [
-      "밀가루",
-      "설탕",
-      "소금",
-      "토마토소스",
-      "양송이버섯",
-      "피망",
-      "식용유",
-      "페퍼로니",
-      "치즈"
-    ],
-    "matchsize": 0,
-    "theme":"american",
-    "url": "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-  },
-  {
-    "id": 7,
-    "menu": "부리또",
-    "ingredients": [
-      "쌀",
-      "또띠아",
-      "토마토소스",
-      "모짜렐라",
-      "소고기",
-      "양배추",
-      "청양고추",
-      "파프리카"
-    ],
-    "matchsize": 0,
-    "theme":"mexican",
-    "url": "https://images.unsplash.com/photo-1558211254-c9761a9bfc8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-  }
+   {
+       "id" : 1,
+       "menu" : "치킨수프",
+       "theme" : "american",
+       "ingredients" : ["닭", "당근", "소금", "후추", "양배추", "샐러리", "양파", "감자", "마늘"],
+       "matchsize" : 0,
+       "url" : "https://images.unsplash.com/photo-1544068192-4c4af19868c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+       "recipeData" : "닭가슴살 2덩이, 당근 1줌, 양파 1개, 소금 약간, 치킨 스톡 2~3큰술, 레몬 1/2개, 화이트와인 약간, 샐러리 3줄기 정도, 표고버섯 큰 것 2개, 마늘 6~7알, 후추 약간, 월계수잎 4장 정도, 펜네 1인분 가량"
+   },
+   {
+       "id" : 2,
+       "menu" : "삼겹살구이",
+       "theme" : "korean",
+       "ingredients" : ["삼겹살", "소금"],
+       "matchsize" : 0,
+       "url" : "https://images.unsplash.com/photo-1550388341-d3d5ac2a724e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=919&q=80",
+       "recipeData" : "까나리액젓 2큰술, 황매실청 2큰술, 양파 1/3개, 고추가루 1큰술, 다시마디포리농축육수 2큰술, 청양고추 2개, 마늘 1톨"
+   },
+   {
+       "id" : 3,
+       "menu" : "까르보나라",
+       "theme" : "american",
+       "ingredients" : ["스파게티면", "치즈", "달걀", "버터"],
+       "matchsize" : 0,
+       "url" : "https://images.unsplash.com/photo-1528658948776-cf610b846f80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80",
+       "recipeData" : "스파게티면 150g, 마늘 8~10알, 페퍼론치노 8~10알, 소금, 파마산치즈 가루 1큰술, 베이컨 100g, 다진마늘 1큰술, 계란 2개, 후추, 허브류 약간"
+   },
+   {
+       "id" : 4,
+       "menu" : "스테이크",
+       "theme" : "american",
+       "ingredients" : ["등심", "식용유", "버터", "후추", "소스"],
+       "matchsize" : 0,
+       "url" : "https://images.unsplash.com/photo-1558199141-391d935676f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80",
+       "recipeData" : "소고기 1줌, 돼지고기 1줌, 양파다진것 1컵, 밀가루 1꼬집, 달걀 1개, 빵가루 1컵, 소금 조금"
+   },
+   {
+       "id" : 5,
+       "menu" : "연어샐러드",
+       "theme" : "european",
+       "ingredients" : ["연어", "샐러리", "마요네즈", "머스타드", "양파", "후추"],
+       "matchsize" : 0,
+       "url" : "https://images.unsplash.com/photo-1558199141-391d935676f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80",
+       "recipeData" : "훈제연어 1팩, 베이비채소 적당량, 양파 1/2개, 발사믹식초 2큰술, 꿀 2큰술, 머스타드 1작은술, 올리브유 1큰술, 청주 1큰술, 연겨자 1/2 작은술"
+   },
+   {
+       "id" : 6,
+       "menu" : "피자",
+       "theme" : "european",
+       "ingredients" : ["밀가루", "설탕", "소금", "토마토소스", "양송이버섯", "피망", "식용유", "페퍼로니", "치즈"],
+       "matchsize" : 0,
+       "url" : "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+   },
+   {
+       "id" : 7,
+       "menu" : "부리또",
+       "theme" : "mexican",
+       "ingredients" : ["쌀", "또띠아", "토마토소스", "모짜렐라", "소고기", "양배추", "청양고추", "파프리카"],
+       "matchsize" : 0,
+       "url" : "https://images.unsplash.com/photo-1558211254-c9761a9bfc8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+   }
 ]
-
