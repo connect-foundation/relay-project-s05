@@ -1,9 +1,8 @@
 
-module.exports = function(app)
-{
+module.exports = function (app) {
     const logic = require("../logic/logic.js")
-    const recipes = require('../logic/recipe.json'); 
-    
+    const recipes = require('../logic/recipe.json');
+
     const bodyParser = require("body-parser");
 
     /** bodyParser.urlencoded(options)
@@ -19,21 +18,33 @@ module.exports = function(app)
      */
     app.use(bodyParser.json());
 
-    app.get('/',function(req,res){
+    app.get('/', function (req, res) {
         res.render('index.html')
     });
-    app.get('/jaeryo',function(req,res){
+    app.get('/jaeryo', function (req, res) {
         res.render('JaeRyo.html')
     });
-    app.get('/theme',function(req,res){
+    app.get('/theme', function (req, res) {
         res.render('Theme.html')
     });
     app.post("/chuchun", function (req, res) {
-        let result = logic.getMaximumMatches(Object.values(req.body),recipes)
+        let result = logic.getMaximumMatches(Object.values(req.body), recipes)
         res.render('ChuChun', {
-            list : result
+            list: result
         });
     });
-     
+
+    app.get("/recipe", function (req, res) {
+        let result = recipes.reduce((acc, cur) => {
+            if (cur.theme === req.query.theme) {
+                acc.push(cur);
+            }
+            return acc;
+        }, [])
+        res.render('Recipe', {
+            list: result,
+            theme: req.query.theme
+        });
+    });
 
 }
