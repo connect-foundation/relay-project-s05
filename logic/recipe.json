@@ -2,6 +2,7 @@
     {
         "id" : 1,
         "menu" : "치킨수프",
+        "theme" : "american",
         "ingredients" : ["닭", "당근", "소금", "후추", "양배추", "샐러리", "양파", "감자", "마늘"],
         "matchsize" : 0,
         "url" : "https://images.unsplash.com/photo-1544068192-4c4af19868c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
@@ -10,6 +11,7 @@
     {
         "id" : 2,
         "menu" : "삼겹살구이",
+        "theme" : "korean",
         "ingredients" : ["삼겹살", "소금"],
         "matchsize" : 0,
         "url" : "https://images.unsplash.com/photo-1550388341-d3d5ac2a724e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=919&q=80"
@@ -18,6 +20,7 @@
     {
         "id" : 3,
         "menu" : "까르보나라",
+        "theme" : "american",
         "ingredients" : ["스파게티면", "치즈", "달걀", "버터"],
         "matchsize" : 0,
         "url" : "https://images.unsplash.com/photo-1528658948776-cf610b846f80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
@@ -25,6 +28,7 @@
     {
         "id" : 4,
         "menu" : "스테이크",
+        "theme" : "american",
         "ingredients" : ["등심", "식용유", "버터", "후추", "소스"],
         "matchsize" : 0,
         "url" : "https://images.unsplash.com/photo-1558199141-391d935676f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80"
@@ -32,6 +36,7 @@
     {
         "id" : 5,
         "menu" : "연어샐러드",
+        "theme" : "european",
         "ingredients" : ["연어", "샐러리", "마요네즈", "머스타드", "양파", "후추"],
         "matchsize" : 0,
         "url" : "https://images.unsplash.com/photo-1558199141-391d935676f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80"
@@ -39,6 +44,7 @@
     {
         "id" : 6,
         "menu" : "피자",
+        "theme" : "european",
         "ingredients" : ["밀가루", "설탕", "소금", "토마토소스", "양송이버섯", "피망", "식용유", "페퍼로니", "치즈"],
         "matchsize" : 0,
         "url" : "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
@@ -46,6 +52,7 @@
     {
         "id" : 7,
         "menu" : "부리또",
+        "theme" : "mexican",
         "ingredients" : ["쌀", "또띠아", "토마토소스", "모짜렐라", "소고기", "양배추", "청양고추", "파프리카"],
         "matchsize" : 0,
         "url" : "https://images.unsplash.com/photo-1558211254-c9761a9bfc8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
