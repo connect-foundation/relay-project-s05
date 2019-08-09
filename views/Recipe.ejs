@@ -128,9 +128,7 @@
 												<img class="img-fluid rounded mb-5" src=<%=a.url%>
 												alt="">
 												<!-- Portfolio Modal - Text -->
-												<% for(const i of a.ingredients) { %>
-												<p><%= i %></p>
-												<% } %> <%= a.recipeData %>
+												<%= a.recipeData %>
 												<p></p>
 
 												<div
@@ -142,7 +140,7 @@
 													<div class="comment">
 
 														<div class="content">
-															<% replyObj[i].forEach(e => { %>
+															<% replyObj[i] && replyObj[i].forEach(e => { %>
 															<a class="avatar">
 															<img src="/img/user.png" /></a>
 															<a class="author">익명 사용자</a>
