@@ -132,31 +132,28 @@
 												<p></p>
 
 												<div
-													class="ui small comments comments_box"
+													class="ui small comments comments_box_<%=i%>"
 													style="text-align: left; margin-top: 50px;"
 												>
 													<h3 class="ui dividing header">Recipe Comments</h3>
 
+													<% replyObj[i] && replyObj[i].forEach(e => { %>
 													<div class="comment">
-
 														<div class="content">
-															<% replyObj[i] && replyObj[i].forEach(e => { %>
-															<a class="avatar">
-															<img src="/img/user.png" /></a>
+															<a class="avatar"> <img src="/img/user.png"/></a>
 															<a class="author">익명 사용자</a>
 															<div class="metadata">
 																<span class="date"><%= e.postedAt%></span>
 															</div>
 															<div class="text"><%= e.content%></div>
-																
-															<% }) %>
 														</div>
 													</div>
+													<% }) %>
 												</div>
 												<div class="ui reply form">
 													<div class="field">
 														<textarea
-															id="comment_form"
+															id="comment_form_<%=i%>"
 															style="height: 130px;"
 														></textarea>
 													</div>
