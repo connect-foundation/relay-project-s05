@@ -50,7 +50,6 @@ app.post('/reply/:menu', (req, res) => {
   const content = req.body.content;
   const menu = req.params.menu;
 
-  console.log(`content는 ${content}`);
   if (!replyObj[menu]) {
     replyObj[menu] = [];
   }
