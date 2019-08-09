@@ -140,15 +140,18 @@
 													<h3 class="ui dividing header">Recipe Comments</h3>
 
 													<div class="comment">
-														<a class="avatar">
-															<img src="/img/user.png" />
-														</a>
+
 														<div class="content">
+															<% replyObj[i].forEach(e => { %>
+															<a class="avatar">
+															<img src="/img/user.png" /></a>
 															<a class="author">익명 사용자</a>
 															<div class="metadata">
-																<span class="date">지금</span>
+																<span class="date"><%= e.postedAt%></span>
 															</div>
-															<div class="text">텍스트</div>
+															<div class="text"><%= e.content%></div>
+																
+															<% }) %>
 														</div>
 													</div>
 												</div>
