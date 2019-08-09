@@ -1,5 +1,5 @@
 // recipe.json 파일에서 읽어들어온 레시피 정보
-const recipes = require("../logic/recipe.json");
+const recipes = require('./recipe.json');
 
 const getAllIngredient = function(recipes) {
   return recipes.reduce((acc, val) => {
@@ -35,11 +35,10 @@ const getMaximumMatches = function(current, recipes) {
     return a.matchsize < b.matchsize;
   });
 
-  if (recipes.length >= 6) return recipes.slice(0, 1);
-  else return recipes;
+  return recipes.length >= 6 ? recipes.slice(0, 1) : recipes;
 };
 
 module.exports = {
-  getMaximumMatches: getMaximumMatches,
-  calculateCount: calculateCount
+  getMaximumMatches,
+  calculateCount
 };
