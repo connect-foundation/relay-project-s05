@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const recipes = require('./logic/recipe.json');
 const logic = require('./logic/logic.js');
 const app = express();
+const replyObj = {};
 
 app.use(express.static('public'));
 app.set('views', __dirname + '/views');
@@ -42,6 +43,20 @@ app.get('/recipe', function(req, res) {
     list: result,
     theme: req.query.theme
   });
+});
+
+app.post('/reply/:id', (req, res) => {
+  const content = req.body.content;
+  const id = req.params.id;
+
+  console.log(`id는 ${id} , content ${content}`);
+  if (!replyObj[id]) {
+    replyObj[id] = [];
+  }
+  replyObj[id].push(content);
+
+  console.log(replyObj[id]);
+  return res.status(201).json({ id, content });
 });
 
 app.use((req, res, next) => {
