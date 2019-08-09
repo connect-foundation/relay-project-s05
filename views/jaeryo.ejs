@@ -103,7 +103,7 @@
 						class="mdb-autocomplete form-control"
 						id="foodIngredients1"
 						name='jeryo1'
-						placeholder="첫번째 재료를 입력해주세요"
+						placeholder="1번째 재료를 입력해주세요"
 						style="text-align: center"
 					/>
 					<!--<input class="form-control" id="email" type="email" placeholder="첫번째 재료를 입력해주세요" required="required" data-validation-required-message="Please enter your email address." style = "text-align: center">-->
@@ -118,7 +118,7 @@
 						id="foodIngredients2"
 						name='jeryo2'
 						type="tel"
-						placeholder="두번째 재료를 입력해주세요"
+						placeholder="2번째 재료를 입력해주세요"
 						required="required"
 						data-validation-required-message="Please enter your phone number."
 						style="text-align: center"
@@ -137,8 +137,29 @@
 				>
 					레시피 추천받기
 				</button>
+				<button type="button" class="btn btn-primary btn-xl" onclick="appendRecipe()">레시피 추가하기</button>
 			</div>
 		</form>
 		<% include ./components/footer %>
 	</body>
+	<script type="text/javascript">
+		let count = 2;
+		
+		function appendRecipe(){
+		  count++;
+		
+		  $('#addRecipe').append(
+			`
+			<div class="control-group">
+			  <div class="form-group floating-label-form-group controls mb-0 pb-2">
+				<label>Phone Number</label>
+				<input class="form-control" name="${count}" type="tel" placeholder="${count}번째 재료를 입력해주세요" required="required"
+				  data-validation-required-message="Please enter your phone number." style="text-align: center">
+				<p class="help-block text-danger"></p>
+			  </div>
+			</div>
+			`
+		  )
+		}
+		</script>
 </html>
