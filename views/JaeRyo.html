@@ -1,100 +1,181 @@
 <html>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<meta name="description" content="" />
+		<meta name="author" content="" />
 
-<head>
+		<title>FOODRUCE 101 - 5분만에 추천받는 간단 레시피</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+		<!-- Custom fonts for this theme -->
+		<link
+			href="vendor/fontawesome-free/css/all.min.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+			rel="stylesheet"
+			type="text/css"
+		/>
 
-  <title>FOODRUCE 101 - 5분만에 추천받는 간단 레시피</title>
+		<!-- Theme CSS -->
+		<link href="css/freelancer.min.css" rel="stylesheet" />
+	</head>
 
-  <!-- Custom fonts for this theme -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<body>
+		<link
+			rel="stylesheet"
+			href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"
+		/>
+		<script src="//code.jquery.com/jquery.min.js"></script>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var ingres = [
+					"고구마",
+					"감",
+					"닭",
+					"당근",
+					"후추",
+					"양배추",
+					"샐러리",
+					"양파",
+					"감자",
+					"마늘",
+					"삼겹살",
+					"소금",
+					"스파게티면",
+					"치즈",
+					"달걀",
+					"버터",
+					"닭가슴살",
+					"닭안심",
+					"닭발",
+					"닭날개",
+					"닭다리",
+					"소고기",
+					"양고기",
+					"치킨",
+					"소등심",
+					"소안심"
+				];
+				$("#foodIngredients1").autocomplete({
+					source: ingres
+				});
+				$("#foodIngredients2").autocomplete({
+					source: ingres
+				});
+			});
+		</script>
 
-  <!-- Theme CSS -->
-  <link href="css/freelancer.min.css" rel="stylesheet">
+		<!-- Navigation -->
+		<nav
+			class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top"
+			id="mainNav"
+		>
+			<div class="container">
+				<a class="navbar-brand js-scroll-trigger" href="#page-top"
+					>FOODRUCE 101</a
+				>
+				<button
+					class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarResponsive"
+					aria-controls="navbarResponsive"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					Menu
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item mx-0 mx-lg-1">
+							<a
+								class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+								href="/jaeryo"
+								>내 레시피로 추천받기</a
+							>
+						</li>
+						<li class="nav-item mx-0 mx-lg-1">
+							<a
+								class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+								href="/theme"
+								>레시피 열람하기</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
+		<!--<h1>재료를 입력해주세요</h1>-->
+		<form action="/chuchun" method="POST" autocomplete="off">
+			<!--<h3>재료1</h3> : <input type="text" name="inp1"><br>-->
+			<!--<h3>재료2</h3> : <input type="text" name="inp2"><br>-->
+			<!--<button></button>-->
+			<!--<input type="submit">-->
+			<!--</form>-->
+			<!--<form name="sentMessage" id="contactForm" novalidate="novalidate">-->
+			<div style="height : 120"></div>
+			<div class="control-group" style="text-align: center">
+				<img
+					class="masthead-avatar"
+					src="img/avataaars.svg"
+					alt=""
+					style="height : 300"
+				/>
+			</div>
+			<div class="control-group">
+				<div class="form-group floating-label-form-group controls mb-0 pb-2">
+					<label>Email Address</label>
+					<input
+						class="mdb-autocomplete form-control"
+						id="foodIngredients1"
+						placeholder="첫번째 재료를 입력해주세"
+						style="text-align: center"
+					/>
+					<!--<input class="form-control" id="email" type="email" placeholder="첫번째 재료를 입력해주세요" required="required" data-validation-required-message="Please enter your email address." style = "text-align: center">-->
+					<p class="help-block text-danger"></p>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="form-group floating-label-form-group controls mb-0 pb-2">
+					<label>Phone Number</label>
+					<input
+						class="form-control"
+						id="foodIngredients2"
+						type="tel"
+						placeholder="두번째 재료를 입력해주세요"
+						required="required"
+						data-validation-required-message="Please enter your phone number."
+						style="text-align: center"
+					/>
+					<p class="help-block text-danger"></p>
+				</div>
+			</div>
+			<br />
 
-</head>
-  
-  <body>
-      <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-      <script src="//code.jquery.com/jquery.min.js"></script>
-      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-      <script type="text/javascript">
-$(function() {
-	var ingres = ["고구마", "감", "닭", "당근", "후추", "양배추", "샐러리", "양파", "감자", "마늘", "삼겹살", "소금", "스파게티면", "치즈", "달걀", "버터", "닭가슴살", "닭안심", "닭발", "닭날개", "닭다리", "소고기", "양고기", "치킨", "소등심", "소안심"];
-	$( "#foodIngredients1" ).autocomplete({
-		source: ingres  
-  });
-  $( "#foodIngredients2" ).autocomplete({
-		source: ingres
-	});
-});
-
-</script>
-        
-
-
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">FOODRUCE 101</a>
-      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/jaeryo">내 레시피로 추천받기</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/theme">레시피 열람하기</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-    <!--<h1>재료를 입력해주세요</h1>-->
-    <form action="/chuchun" method="POST" autocomplete="off">
-        <!--<h3>재료1</h3> : <input type="text" name="inp1"><br>-->
-        <!--<h3>재료2</h3> : <input type="text" name="inp2"><br>-->
-      <!--<button></button>-->
-      <!--<input type="submit">-->
-    <!--</form>-->
-    <!--<form name="sentMessage" id="contactForm" novalidate="novalidate">-->
-      <div style = "height : 120"></div>
-      <div class="control-group" style = "text-align: center">
-        <img class="masthead-avatar" src="img/avataaars.svg" alt="" style = "height : 300">
-      </div>
-      <div class="control-group">
-        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-          <label>Email Address</label>
-          <input class="mdb-autocomplete form-control" id="foodIngredients1" placeholder="첫번째 재료를 입력해주세"  style = "text-align: center">
-          <!--<input class="form-control" id="email" type="email" placeholder="첫번째 재료를 입력해주세요" required="required" data-validation-required-message="Please enter your email address." style = "text-align: center">-->
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-          <label>Phone Number</label>
-          <input class="form-control" id="foodIngredients2" type="tel" placeholder="두번째 재료를 입력해주세요" required="required" data-validation-required-message="Please enter your phone number."style = "text-align: center">
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <br>
-          
-      <div id="success"></div>
-      <div class="form-group"style = "text-align: center">
-        <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton" >레시피 추천받기</button>
-      </div>
-    </form>
-      
-  </body>
+			<div id="success"></div>
+			<div class="form-group" style="text-align: center">
+				<button
+					type="submit"
+					class="btn btn-primary btn-xl"
+					id="sendMessageButton"
+				>
+					레시피 추천받기
+				</button>
+			</div>
+		</form>
+	</body>
 </html>
