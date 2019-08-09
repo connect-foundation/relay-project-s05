@@ -21,8 +21,10 @@ app.get('/jaeryo', function(req, res) {
 app.get('/theme', function(req, res) {
   res.render('Theme.html');
 });
+
 app.post('/chuchun', function(req, res) {
   let result = logic.getMaximumMatches(Object.values(req.body), recipes);
+
   res.render('ChuChun', {
     list: result
   });
@@ -35,6 +37,7 @@ app.get('/recipe', function(req, res) {
     }
     return acc;
   }, []);
+
   res.render('Recipe', {
     list: result,
     theme: req.query.theme
