@@ -3,18 +3,7 @@ const bodyParser = require('body-parser');
 const recipes = require('./logic/recipe.json');
 const logic = require('./logic/logic.js');
 const app = express();
-const replyObj = {
-  스테이크: [
-    {
-      content: '123',
-      postedAt: new Date()
-    },
-    {
-      content: '456',
-      postedAt: new Date()
-    }
-  ]
-};
+const replyObj = {};
 
 app.use(express.static('public'));
 app.set('views', __dirname + '/views');
@@ -66,9 +55,8 @@ app.post('/reply/:menu', (req, res) => {
   }
   replyObj[menu].push({
     content,
-    postedAt: new Date()
+    postedAt: getDate()
   });
-
   return res.status(201).json({ menu, content });
 });
 
@@ -79,3 +67,15 @@ app.use((req, res, next) => {
 app.listen(3000, function() {
   console.log('Express server has started on port 3000');
 });
+
+const getDate = () => {
+  const date = new Date();
+  const month = ('0' + (date.getMonth() + 1)).slice(-2);
+  const day = ('0' + (date.getDate() + 1)).slice(-2);
+  const hour = ('0' + date.getHours()).slice(-2);
+  const min = ('0' + date.getMinutes()).slice(-2);
+  const seconds = ('0' + date.getSeconds()).slice(-2);
+  const yyyymmdd = `${date.getFullYear()}-${month}-${day}`;
+  const hhmmss = `${hour}:${min}:${seconds}`;
+  return `${yyyymmdd} ${hhmmss}`;
+};
