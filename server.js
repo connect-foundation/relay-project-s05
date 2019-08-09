@@ -3,7 +3,18 @@ const bodyParser = require("body-parser");
 const recipes = require("./logic/recipe.json");
 const logic = require("./logic/logic.js");
 const app = express();
-const replyObj = {};
+const replyObj = {
+	스테이크: [
+		{
+			content: "123",
+			postedAt: new Date()
+		},
+		{
+			content: "456",
+			postedAt: new Date()
+		}
+	]
+};
 
 app.use(express.static("public"));
 app.set("views", __dirname + "/views");
@@ -39,24 +50,28 @@ app.get("/recipe", function(req, res) {
 		return acc;
 	}, []);
 
-	res.render("Recipe", {
+	res.render("recipe", {
 		list: result,
-		theme: req.query.theme
+		theme: req.query.theme,
+		replyObj
 	});
 });
 
-app.post('/reply/:id', (req, res) => {
-  const content = req.body.content;
-  const id = req.params.id;
+app.post("/reply/:menu", (req, res) => {
+	const content = req.body.content;
+	const menu = req.params.menu;
 
-  console.log(`id는 ${id} , content ${content}`);
-  if (!replyObj[id]) {
-    replyObj[id] = [];
-  }
-  replyObj[id].push(content);
+	console.log(`id는 ${menu} , content ${content}`);
+	if (!replyObj[menu]) {
+		replyObj[menu] = [];
+	}
+	replyObj[menu].push({
+		content,
+		postedAt: new Date()
+	});
 
-  console.log(replyObj[id]);
-  return res.status(201).json({ id, content });
+	console.log(replyObj[id]);
+	return res.status(201).json({ id, content });
 });
 
 app.use((req, res, next) => {

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 	<head>
-		​
 		<meta charset="utf-8" />
 		<meta
 			name="viewport"
@@ -31,6 +30,15 @@
 		​
 		<!-- Theme CSS -->
 		<link href="css/freelancer.min.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/comment.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/form.min.css"
+		/>
+
 		​ ​ ​ ​ ​
 	</head>
 	​
@@ -106,7 +114,7 @@
 												<h2
 													class="portfolio-modal-title text-secondary text-uppercase mb-0"
 												>
-													<%=a.menu%>
+													<%= a.menu %>
 												</h2>
 												<!-- Icon Divider -->
 												<div class="divider-custom">
@@ -124,14 +132,50 @@
 												<p><%= i %></p>
 												<% } %> <%= a.recipeData %>
 												<p></p>
-												<button
-													class="btn btn-primary"
-													href="#"
-													data-dismiss="modal"
+
+												<div
+													class="ui small comments comments_box"
+													style="text-align: left; margin-top: 50px;"
 												>
-													<i class="fas fa-times fa-fw"></i>
-													Close Window
-												</button>
+													<h3 class="ui dividing header">Recipe Comments</h3>
+
+													<div class="comment">
+														<a class="avatar">
+															<img src="/img/user.png" />
+														</a>
+														<div class="content">
+															<a class="author">익명 사용자</a>
+															<div class="metadata">
+																<span class="date">지금</span>
+															</div>
+															<div class="text">텍스트</div>
+														</div>
+													</div>
+												</div>
+												<div class="ui reply form">
+													<div class="field">
+														<textarea
+															id="comment_form"
+															style="height: 130px;"
+														></textarea>
+													</div>
+													<button
+														class="btn btn-primary"
+														style="float: right"
+														onclick="postComment()"
+													>
+														<i class="fas fa-edit"></i>
+														댓글 작성
+													</button>
+													<button
+														class="btn btn-primary"
+														data-dismiss="modal"
+														style="float: left;"
+													>
+														<i class="fas fa-times fa-fw"></i>
+														닫기
+													</button>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -177,6 +221,11 @@
 		​
 		<!-- Custom scripts for this template -->
 		<script src="js/freelancer.min.js"></script>
+
+		<!-- comments -->
+		<script src="js/comments.js"></script>
+
+		<!-- axios for ajax -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 	</body>
 </html>
-​
