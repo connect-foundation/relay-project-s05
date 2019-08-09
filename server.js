@@ -41,6 +41,10 @@ app.get('/recipe', function(req, res) {
   });
 });
 
+app.use((req, res, next) => {
+  res.status(404).end('404 NOT FOUND');
+});
+
 app.listen(3000, function() {
   console.log('Express server has started on port 3000');
 });
