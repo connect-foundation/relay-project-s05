@@ -50,7 +50,8 @@
     "theme": "european",
     "ingredients": ["밀가루","토마토","양송이버섯","피망","페퍼로니","치즈"],
     "matchsize": 0,
-    "url": "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+    "url": "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    "recipeData": "강력분 200g, 물 120ml, 드라이이스트 4g 설탕 10g 소금 4g, 올리브오일 15g, 토마토소스 3스푼, 양송이버섯 1개, 피망 1개, 페퍼로니 100g, 치즈200g"
   },
   {
     "id": 7,
@@ -58,6 +59,7 @@
     "theme": "mexican",
     "ingredients": ["쌀","또띠아","토마토","소고기"],
     "matchsize": 0,
-    "url": "https://images.unsplash.com/photo-1558211254-c9761a9bfc8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+    "url": "https://images.unsplash.com/photo-1558211254-c9761a9bfc8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    "recipeData": "밥 1kg, 양파 0.5개, 홍고추 2개, 다진마늘 3개, 버터, 소금, 후추, 타코시즈닝, 피코데가요(프레쉬살사), 할라피뇨 2개, 사워크림 반컵. 체다치즈 1줌. 몬테리잭치즈 1줌, 소고기 100g"
   }
 ]
